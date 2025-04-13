@@ -1,35 +1,178 @@
-@import url('../../assets/css/style.css');
-body{
-    background-color: gray;
-    height: 100vh; 
-    width: 100vw;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
-.container{
-    height: 100%;
-    width: 100%;
-    background-color: darkgray;
-    display: flex;
+
+body {
+  background-color: #e0e0e0;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
 }
-main{
-    width: 60%;
-    height: 100%;
-    background-color: white;
-    padding: 30px;
+
+.container {
+  background-color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
 }
-aside{
-    height: 100%;
-    width: 40%;
-    background-color: rgb(150, 147, 147);
-    padding: 30px;
-    .datosPersonales{
-        width: 100%;
-        height: 150px;
-        background-color: antiquewhite;
-    }
-    .educacion{
-        width: 100%;
-        height: 150px;
-        background-color: rgba(250, 235, 215, 0.678);
-    }
-    
+
+main {
+  flex: 2 1 60%;
+  padding: 40px;
+  background-color: #fff;
+}
+
+.header-cv h1 {
+  font-size: 2.4rem;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.header-cv h2 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #7f8c8d;
+  margin-bottom: 20px;
+}
+
+main hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 2px solid #ccc;
+}
+
+main h3 {
+  font-size: 1.4rem;
+  color: #34495e;
+  margin-bottom: 10px;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 5px;
+}
+
+.resumen p,
+.habilidades ul li {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.habilidades ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+aside {
+  flex: 1 1 40%;
+  padding: 40px;
+  background-color: #f8f8f8;
+  border-left: 2px solid #e0e0e0;
+}
+
+aside h3 {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 5px;
+}
+
+.educacion article {
+  margin-bottom: 25px;
+}
+
+.educacion h4 {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.educacion p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.socialMedia ul {
+  list-style: none;
+  padding: 0;
+}
+
+.socialMedia li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.socialMedia li img {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.socialMedia li a {
+  text-decoration: none;
+  color: #2980b9;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.socialMedia li a:hover {
+  color: #1abc9c;
+}
+
+.socialMedia li:hover img {
+  transform: scale(1.1);
+}
+
+.datosPersonales {
+  width: 100%;
+  background-color: #fdf1e6;
+  padding: 30px 40px;
+  border-top: 2px solid #e0e0e0;
+}
+
+.datosPersonales h3 {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 5px;
+}
+
+.datosPersonales ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.datosPersonales li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  main,
+  aside {
+    flex: 1 1 100%;
+    padding: 20px;
+  }
+  
+  .datosPersonales {
+    padding: 20px;
+  }
 }
